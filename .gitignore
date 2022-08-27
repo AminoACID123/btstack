@@ -27,4 +27,4 @@ build
 build-asan
 build-coverage
 *.bc
-
+**/CMakeFiles

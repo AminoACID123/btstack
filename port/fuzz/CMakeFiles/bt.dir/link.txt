@@ -1,1 +1,0 @@
-/home/xaz/Downloads/llvm/bin/clang CMakeFiles/bt.dir/main.c.o -o bt  libbtstack.a 
