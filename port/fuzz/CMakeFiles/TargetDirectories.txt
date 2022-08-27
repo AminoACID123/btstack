@@ -1,0 +1,4 @@
+/home/xaz/Documents/lightblue/btstack/port/fuzz/CMakeFiles/btstack.dir
+/home/xaz/Documents/lightblue/btstack/port/fuzz/CMakeFiles/bt.dir
+/home/xaz/Documents/lightblue/btstack/port/fuzz/CMakeFiles/edit_cache.dir
+/home/xaz/Documents/lightblue/btstack/port/fuzz/CMakeFiles/rebuild_cache.dir

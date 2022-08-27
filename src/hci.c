@@ -7495,7 +7495,7 @@ uint8_t gap_disconnect(hci_con_handle_t handle){
     }
     conn->state = SEND_DISCONNECT;
     hci_run();
-    return 0;
+return 0;
 }
 
 int gap_read_rssi(hci_con_handle_t con_handle){

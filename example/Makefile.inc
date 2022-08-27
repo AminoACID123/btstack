@@ -292,6 +292,23 @@ HXCMOD_PLAYER_OBJ = $(HXCMOD_PLAYER:.c=.o)
 LWIP_OBJ = $(LWIP_SRC:.c=.o)
 MESH_OBJ = $(MESH:.c=.o)
 
+ALL_OBJ = 						\
+	${CORE_OBJ}					\
+	${COMMON_OBJ} 				\
+	${CLASSIC_OBJ}				\
+	${ATT_OBJ}					\
+	${GATT_CLIENT_OBJ} 			\
+	${GATT_SERVER_OBJ}			\
+	${PAN_OBJ}					\
+	${SBC_DECODER_OBJ}			\
+	${SBC_ENCODER_OBJ}			\
+	${CVSD_PLC_OBJ}				\
+	${AVDTP_OBJ}				\
+	${AVRCP_OBJ}				\
+	${HXCMOD_PLAYER_OBJ}		\
+	${LWIP_OBJ}					\
+	${MESH_OBJ}
+
 default_target: all
 
 # compile .gatt descriptions
@@ -302,6 +319,9 @@ default_target: all
 
 ant_test: ${CORE_OBJ} ${COMMON_OBJ} ${CLASSIC_OBJ} ant_test.c
 	${CC} $^ ${CFLAGS} ${LDFLAGS} -o $@
+
+stack: ${ALL_OBJ}
+	${AR} cr libbtstack.a $^
 
 sdp_rfcomm_query: ${CORE_OBJ} ${COMMON_OBJ} ${CLASSIC_OBJ} ${PAN_OBJ} ${SDP_CLIENT} sdp_rfcomm_query.c
 	${CC} $^ ${CFLAGS} ${LDFLAGS} -o $@

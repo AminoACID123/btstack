@@ -238,7 +238,7 @@ static void handle_gatt_client_event(uint8_t packet_type, uint16_t channel, uint
     gatt_client_service_t service;
     gatt_client_characteristic_t characteristic;
     switch(hci_event_packet_get_type(packet)){
-        case GATT_EVENT_SERVICE_QUERY_RESULT:\
+        case GATT_EVENT_SERVICE_QUERY_RESULT:
             gatt_event_service_query_result_get_service(packet, &service);
             dump_service(&service);
             services[service_count++] = service;

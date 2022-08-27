@@ -1,0 +1,9 @@
+{
+    "makefile.extensionOutputFolder": "./.vscode",
+    "files.associations": {
+        "sm.h": "c",
+        "gatt_client.h": "c",
+        "hci_transport.h": "c",
+        "bluetoothdrv.h": "c"
+    }
+}

@@ -1,0 +1,67 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [// Port related features
+            "HAVE_ASSERT",
+            "HAVE_BTSTACK_STDIN",
+            "HAVE_MALLOC",
+            "HAVE_POSIX_FILE_IO",
+            "HAVE_POSIX_TIME",
+            
+            // BTstack features that can be enabled
+            "ENABLE_ATT_DELAYED_RESPONSE",
+            "ENABLE_BLE",
+            "ENABLE_CLASSIC",
+            "ENABLE_CROSS_TRANSPORT_KEY_DERIVATION",
+            "ENABLE_HFP_WIDE_BAND_SPEECH",
+            "ENABLE_L2CAP_ENHANCED_RETRANSMISSION_MODE",
+            "ENABLE_LE_CENTRAL",
+            "ENABLE_L2CAP_LE_CREDIT_BASED_FLOW_CONTROL_MODE",
+            "ENABLE_LE_DATA_LENGTH_EXTENSION",
+            "ENABLE_LE_PERIPHERAL",
+            "ENABLE_LE_PRIVACY_ADDRESS_RESOLUTION",
+            "ENABLE_LE_SECURE_CONNECTIONS",
+            "ENABLE_LOG_ERROR",
+            "ENABLE_LOG_INFO",
+            "ENABLE_MICRO_ECC_FOR_LE_SECURE_CONNECTIONS",
+            "ENABLE_PRINTF_HEXDUMP",
+            "ENABLE_SCO_OVER_HCI",
+            "ENABLE_SDP_DES_DUMP",
+            "ENABLE_SOFTWARE_AES128",
+            "ENABLE_LE_EXTENDED_ADVERTISING",
+
+            "HCI_ACL_PAYLOAD_SIZE (1691 + 4)",
+            "HCI_INCOMING_PRE_BUFFER_SIZE 14",
+            
+            "NVM_NUM_DEVICE_DB_ENTRIES=16",
+            "NVM_NUM_LINK_KEYS=16",
+            
+            // Mesh Configuration
+            "ENABLE_MESH",
+            "ENABLE_MESH_ADV_BEARER",
+            "ENABLE_MESH_GATT_BEARER",
+            "ENABLE_MESH_PB_ADV",
+            "ENABLE_MESH_PB_GATT",
+            "ENABLE_MESH_PROVISIONER",
+            "ENABLE_MESH_PROXY_SERVER",
+            
+            "MAX_NR_MESH_SUBNETS=2",
+            "MAX_NR_MESH_TRANSPORT_KEYS=16",
+            "MAX_NR_MESH_VIRTUAL_ADDRESSES=16",
+            
+            // allow for one NetKey update
+            "MAX_NR_MESH_NETWORK_KEYS=(MAX_NR_MESH_SUBNETS+1)"],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "linux-gcc-x64",
+            "configurationProvider": "ms-vscode.makefile-tools",
+            "compileCommands": "${workspaceFolder}/port/libusb/compile_commands.json"
+        }
+    ],
+    "version": 4
+}
