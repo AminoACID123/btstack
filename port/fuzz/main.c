@@ -345,13 +345,8 @@ int main(int argc, const char * argv[]){
     // turn on!
     hci_power_control(HCI_POWER_ON);
 
-    pthread_t thread;
-    arg_struct_t arg;
-    uint8_t data[] = {0x0e, 0x04, 0x01, 0x03, 0x0c, 0x01};
-    arg.packet_type = HCI_EVENT_PACKET;
-    arg.packet = data;
-    arg.size = 6;
-    pthread_create(&thread, NULL, recv_packet, (void*)&arg);
+    bd_addr_t addr;
+    gap_local_bd_addr(addr);
 
     btstack_run_loop_execute();   
 

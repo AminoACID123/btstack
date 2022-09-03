@@ -1,0 +1,19 @@
+Operations:
+  - GAP_START_ADVERTISE:
+    headers: [gap.h]
+    inputs: []
+    outputs: []
+    exec:  |
+    	gap_advertisements_enable(true);
+    	
+  - GAP_SET_ADVERTISE_DATA:
+    headers: [gap.h]
+    inputs: ['u8 size', 'u8* data']
+    outputs: []
+    exec:  |
+    	gap_advertisements_set_data($i0, $i1);
+   
+   - GAP_SET_ADVERTISE_PARAM:
+    headers: [gap.h]
+    inputs: []
+

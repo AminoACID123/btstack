@@ -4,6 +4,7 @@
         "sm.h": "c",
         "gatt_client.h": "c",
         "hci_transport.h": "c",
-        "bluetoothdrv.h": "c"
+        "bluetoothdrv.h": "c",
+        "stdio.h": "c"
     }
 }
